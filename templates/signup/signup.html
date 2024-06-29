@@ -1,0 +1,42 @@
+<Html>
+    <Head>
+        <Title>Sign Up Page</Title>
+    </Head>
+    <Body>
+        <Center><H1>Registeration Form</H1></Center>
+        <Form action = "#" method = "post">
+            { % csrf_token % }
+            { % load static % }
+            <Center>
+                <Div class = "container">
+                    <Div class = "imgcontainer">
+                        <img src = "{ % static 'signup/avatar_img2.png'% }" width = "200px" alt = "Avatar">
+                    </Div>
+                    <Label for = "first_name"><B>First Name: </B></Label>
+                    <Input type = "text" placeholder = "Enter Your First Name" name = "first_name" required><Br><Br>
+
+                    <Label for = "last_name"><B>Last Name : </B></Label>
+                    <Input type = "text" placeholder = "Enter Your Last Name" name = "last_name" required><Br><Br>
+
+                    <Label for = "gender"><B>Gender : </B></Label>
+                    <Input type = "radio" name = "gender" value = "male" required>
+                    <Label><B>Male</B></Label>
+                    <Input type = "radio" value = "female" required>
+                    <Label><B>Female</B></Label><Br><Br>
+
+                    <Label for = "dob"><B>Date Of Birth : </B></Label>
+                    <Input type = "date" placeholder = "Enter Your Date Of Birth" name = "dob" required><Br><Br>
+
+                    <Label for = "email"><B>Email: </B></Label>
+                    <Input type = "email" placeholder = "Enter Your Email" name = "email" required><Br><Br>
+
+                    <Label for = "password"><B>Password: </B></Label>
+                    <Input type = "password" placeholder = "Enter Your Password" name = "password" required><Br><Br>
+
+                    <Button type = "submit"><B>Sign Up</B></Button><Br><Br>
+                    <P>Already Have An Account ? <A href = "http://localhost:8000/login/">Login</A></P>
+                </Div>
+            </Center>
+        </Form>
+    </Body>
+</Html>

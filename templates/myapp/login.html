@@ -1,0 +1,30 @@
+<Html>
+
+<Head>
+    <Title>Login Form</Title>
+</Head>
+
+<Body>
+    <Center>
+        <H1>Login Form</H1>
+    <Form action="#" method="POST">
+    {% csrf_token %}<!--Check Eveything For Form Submission, Only For Form-->
+    {% load static %}<!--Images Etc-->
+    {{ form.as_p }} <!--Diplay Entire Form As A 'P TAG'-->
+            <!--
+                <Div class = "container">
+                    <Div class = "imgcontainer">
+                        <img src = "{ % static 'myapp/avatar_img1.jpg' % }" width = "200px" alt = "Avatar"><Br><Br>
+                    </Div>
+                    <Label for = "email"><B>Email Id : </B></Label>
+                    <Input type = "email" placeholder = "Enter Your Email" float = "right" name = "email" required><Br><Br>
+                    <Label for = "password"><B>Password:</B></Label>
+                    <Input type = "password" placeholder = "Enter Your Password" float = "right" name = "password" required><Br><Br>
+                </Div>-->
+        <Button type="submit"><B>Login</B></Button>
+        <P>Don't Have An Account? <A href="http://localhost:8000/signup/">Signup </A></P>
+    </Center>
+    </Form>
+</Body>
+
+</Html>
